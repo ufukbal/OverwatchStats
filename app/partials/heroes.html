@@ -1,0 +1,36 @@
+<style>
+table, th , td  {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 4px;
+}
+table tbody tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+table tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+</style>
+<table>
+  <thead>
+    <tr><th colspan="4">Overwatch Champions Stats</th></tr>
+    <tr>
+       
+        <th colspan="2">champ</th>
+        <th colspan="1">time</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr ng-repeat="hero in heroesList">
+        
+        <td><img ng-src="{{ hero.image }}" />  </td>
+        <td>
+          {{hero.name}}
+        </td>
+        <td>
+          {{hero.playtime}}
+        </td>
+        
+      </tr>
+  </tbody>
+</table>
