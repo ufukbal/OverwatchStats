@@ -19,30 +19,8 @@ table tbody tr:nth-child(even) {
 }
 </style>
 
-<body ng-app="OverwatchStatsApp" ng-controller="heroesController">
-  <table>
-    <thead>
-      <tr><th colspan="4">Overwatch Champions Stats</th></tr>
-      <tr>
-        
-        <th colspan="2">champ</th>
-        <th colspan="1">time</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr ng-repeat="hero in heroesList">
-        
-        <td><img ng-src="{{ hero.image }}" />  </td>
-        <td>
-          {{hero.name}}
-        </td>
-        <td>
-          {{hero.playtime}}
-        </td>
-        
-      </tr>
-    </tbody>
-  </table>
+<body ng-app="OverwatchStatsApp">
+  <ng-view></ng-view>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="js/app.js"></script>
