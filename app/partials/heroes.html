@@ -25,7 +25,9 @@ table tbody tr:nth-child(even) {
         
         <td><img ng-src="{{ hero.image }}" />  </td>
         <td>
-          {{hero.name}}
+			<a href="#/heroes/{{hero.name}}/">
+			{{hero.name}}
+			</a>
         </td>
         <td>
           {{hero.playtime}}
